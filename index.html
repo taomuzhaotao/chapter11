@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10151d" />
+  <title>第十一章｜墙后面为什么先响了一次</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <main id="app">
+    <section class="screen active" id="cover">
+      <div class="eyebrow">第十一章</div>
+      <h1>墙后面为什么<br><span>先响了一次</span></h1>
+      <p class="lead">钟楼只敲了一下。可旧石墙后的人，都听见了两声。</p>
+      <button class="primary" data-next="story1">进入城墙</button>
+      <div class="small">建议戴上耳机 · 全程约 6–10 分钟</div>
+    </section>
+
+    <section class="screen" id="story1">
+      <div class="scene wall-scene">
+        <div class="moon"></div>
+        <div class="tower"><div class="bell">●</div></div>
+        <div class="wall"></div>
+      </div>
+      <div class="card">
+        <div class="chapterline">旧城 · 正午</div>
+        <p>钟楼敲响。</p>
+        <p class="sfx">咚。</p>
+        <p>你把手贴在城墙上。</p>
+        <p class="whisper">……咚。</p>
+        <p>奇怪的是，贴着墙听到的那一下，反而更早。</p>
+        <button class="primary" data-next="question1">为什么？</button>
+      </div>
+    </section>
+
+    <section class="screen" id="question1">
+      <div class="panel">
+        <div class="eyebrow">问题一</div>
+        <h2>同一个钟声，为什么会到你这里两次？</h2>
+        <div class="choices" data-question="q1">
+          <button data-value="ghost">墙里还有一口钟</button>
+          <button data-value="echo">第一声是回声</button>
+          <button data-value="paths">声音走了两条不同的路</button>
+        </div>
+        <div class="feedback" id="q1-feedback"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="experiment1">
+      <div class="panel experiment">
+        <div class="eyebrow">小实验 · 桌面传声</div>
+        <h2>敲一下桌子，再把耳朵贴上去。</h2>
+        <p>你不需要真的去找桌子。先在这里模拟一次。</p>
+        <div class="table-demo">
+          <div class="ear">◖</div>
+          <div class="table"></div>
+          <button id="tapBtn" class="tap">敲一下</button>
+          <div class="pulse solid"></div>
+          <div class="pulse air"></div>
+        </div>
+        <div class="meter-wrap">
+          <div><span>固体路径</span><b id="solidTime">—</b></div>
+          <div><span>空气路径</span><b id="airTime">—</b></div>
+        </div>
+        <button class="primary hidden" id="exp1next" data-next="question2">我发现了</button>
+      </div>
+    </section>
+
+    <section class="screen" id="question2">
+      <div class="panel">
+        <div class="eyebrow">问题二</div>
+        <h2>所以，声音到底是什么？</h2>
+        <p class="hint">别背定义。想象钟被敲响的一瞬间。</p>
+        <div class="choices" data-question="q2">
+          <button data-value="thing">一种从钟里飞出来的“东西”</button>
+          <button data-value="vibration">物体的振动，一层层传给周围物质</button>
+          <button data-value="light">一种看不见的光</button>
+        </div>
+        <div class="feedback" id="q2-feedback"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="experiment2">
+      <div class="panel experiment">
+        <div class="eyebrow">推理实验 · 两条路</div>
+        <h2>如果声音从墙里跑得更快，会发生什么？</h2>
+        <p>拖动观察点，比较两条路径的到达时间。</p>
+        <div class="track">
+          <div class="source">钟</div>
+          <div class="route route-solid"><span>石墙</span></div>
+          <div class="route route-air"><span>空气</span></div>
+          <div class="observer" id="observer">你</div>
+        </div>
+        <input id="distance" type="range" min="10" max="100" value="65" />
+        <div class="readout">
+          <div>墙中：<strong id="tSolid">0.02 s</strong></div>
+          <div>空气：<strong id="tAir">0.19 s</strong></div>
+          <div>先到：<strong>墙中的振动</strong></div>
+        </div>
+        <button class="primary" data-next="question3">继续追问</button>
+      </div>
+    </section>
+
+    <section class="screen" id="question3">
+      <div class="panel">
+        <div class="eyebrow">问题三</div>
+        <h2>如果声音必须“借东西”传播……</h2>
+        <p class="bigq">那什么都没有的地方，会有声音吗？</p>
+        <div class="choices" data-question="q3">
+          <button data-value="yes">会，只是特别小</button>
+          <button data-value="no">不会，因为没有东西可以接着振动</button>
+          <button data-value="depends">要看声音够不够大</button>
+        </div>
+        <div class="feedback" id="q3-feedback"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="space">
+      <div class="space-scene">
+        <div class="stars"></div>
+        <div class="sun"></div>
+        <div class="earth"></div>
+      </div>
+      <div class="card darkcard">
+        <div class="eyebrow">最后一个问题</div>
+        <h2>如果太阳此刻发生一次巨大的爆炸——</h2>
+        <p>我们会先看到它，还是先听到它？</p>
+        <div class="choices" data-question="q4">
+          <button data-value="hear">先听到</button>
+          <button data-value="see">只会先看到；太空里没有空气传声</button>
+          <button data-value="same">同时</button>
+        </div>
+        <div class="feedback" id="q4-feedback"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="ending">
+      <div class="ending-wrap">
+        <div class="eyebrow">第十一章 · 完</div>
+        <h2>声音不是“跑过来”的东西。</h2>
+        <p>它更像一次被传下去的推搡：一个粒子动一下，再把下一个推开。</p>
+        <p>空气能传，水能传，石头也能传。不同介质里，传播速度不同。</p>
+        <div class="quote">“同一件事，走不同的路，会在不同的时间抵达你。”</div>
+        <div class="factbox">
+          <b>你刚刚推出来的科学：</b>
+          <span>声音来自振动；传播需要介质；在固体中通常比在空气中传播更快；真空中不能传播声音。</span>
+        </div>
+        <button class="primary" data-next="teaser">查看下一章线索</button>
+      </div>
+    </section>
+
+    <section class="screen" id="teaser">
+      <div class="teaser-wrap">
+        <p>夜里，天文台送来一张奇怪的照片。</p>
+        <p>照片里，一颗已经“死去”的星星，仍然在发光。</p>
+        <div class="eyebrow">下一章</div>
+        <h1>第十二章<br><span>已经消失的星星</span></h1>
+        <button class="secondary" data-next="cover">重新游玩第十一章</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="progress"><span id="progressBar"></span></div>
+  <script src="script.js"></script>
+</body>
+</html>
