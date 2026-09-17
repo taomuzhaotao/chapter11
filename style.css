@@ -192,3 +192,31 @@ dialog header button{border:0;background:none;font-size:28px;cursor:pointer}
   .community-dialog form{padding:18px}
   .community-dialog footer{align-items:flex-start;gap:10px}
 }
+
+/* Memory investigation interactions */
+.word-lab{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-top:22px}
+.verb-panel{background:#f8f6ef;border:1px solid #cdd4cc;padding:20px}
+.verb-buttons,.prediction{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.verb-buttons button,.prediction button,.source-grid button{border:1px solid #b9c5bd;background:#fffdf8;padding:10px 13px;cursor:pointer}
+.verb-buttons button.selected,.prediction button.selected,.source-grid button.selected{background:var(--green);color:#fff;border-color:var(--green)}
+.speed-read{display:grid;grid-template-columns:1fr auto;align-items:end;margin:26px 0 8px}
+.speed-read strong{font-size:50px;color:#805f32}
+.speed-read small{grid-column:1/-1;color:#7a8882}
+.speed-track{height:12px;background:#d9ded7;overflow:hidden}
+.speed-track i{display:block;width:0;height:100%;background:#b88b49;transition:width .45s}
+.glass-table{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.glass-table div{background:#f9f7f0;border:1px solid #ccd4cc;padding:22px;text-align:center}
+.glass-table b{display:block;font-size:30px;color:#34594d}
+.glass-table span{color:#687a72}
+.glass-table p{grid-column:1/-1;margin:0;padding:13px;background:#f0e5d7;color:#765b3b;text-align:center}
+.source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}
+.source-grid button{text-align:left;padding:18px}
+.source-grid b,.source-grid span{display:block}
+.source-grid span{margin-top:8px;font-size:13px;color:#74827c;line-height:1.5}
+.source-grid button.selected span{color:#dce7e1}
+.memory-chain{display:flex;align-items:stretch;justify-content:center;gap:8px;margin:28px 0;flex-wrap:wrap}
+.memory-chain div{width:145px;background:#e7ebe4;border:1px solid #ccd3cb;padding:16px 10px}
+.memory-chain b,.memory-chain span{display:block}
+.memory-chain span{margin-top:8px;color:#687970;font-size:13px;line-height:1.5}
+.memory-chain i{align-self:center;font-style:normal;color:#9a7541}
+@media(max-width:760px){.word-lab{grid-template-columns:1fr}.glass-table,.source-grid{grid-template-columns:1fr}.glass-table p{grid-column:1}.memory-chain{display:grid;grid-template-columns:1fr}.memory-chain div{width:auto}.memory-chain i{transform:rotate(90deg);justify-self:center}}
