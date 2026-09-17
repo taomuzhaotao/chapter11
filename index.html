@@ -17,6 +17,7 @@
       <button id="soundBtn" aria-pressed="true"><i>♪</i> 声音开</button>
       <button data-action="toc"><i>☷</i> 目录</button>
       <button data-action="notebook"><i>▱</i> 线索本 <em id="clueCount">0</em></button>
+      <button data-action="community"><i>♙</i> 排行与留言</button>
     </nav>
   </header>
 
@@ -68,6 +69,7 @@
   <dialog id="tocDialog"><form method="dialog"><header><h2>故事目录</h2><button aria-label="关闭">×</button></header><ol id="tocList"></ol></form></dialog>
   <dialog id="notebookDialog"><form method="dialog"><header><h2>你的线索本</h2><button aria-label="关闭">×</button></header><div id="clueList"></div></form></dialog>
   <dialog id="sourceDialog"><form method="dialog"><header><h2>这一页的科学说明</h2><button aria-label="关闭">×</button></header><div id="sourceText"></div></form></dialog>
+  <dialog id="communityDialog" class="community-dialog"><form method="dialog"><header><div><small>所有玩家共享</small><h2>排行榜与留言</h2></div><button aria-label="关闭">×</button></header><div id="communityStatus" class="community-status">正在读取大家的调查记录……</div><div id="communityBoard"></div><footer><button type="button" id="refreshCommunity">刷新记录</button><span>成绩和留言来自公开的 GitHub Issues</span></footer></form></dialog>
 
   <script src="script.js?v=rebuild-1"></script>
 </body>
